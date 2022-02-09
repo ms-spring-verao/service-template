@@ -1,8 +1,12 @@
-# Chassis
+# Service Template
 
-This is a basic service [Chassis][chassis] for SpringBoot services within Pingr.
+This is a basic service [Service Template][template] for SpringBoot services within Pingr.
 
 ## How to use it
+
+### Remove Chassis placeholders
+
+> For further information on Chassis pattern, check [this page][chassis]
 
 The code boilerplate contains a few information that **must be replaced** with real values. To identify them, run on the root directory of this chassis:
 
@@ -20,5 +24,26 @@ As of the date this document is being written, the spots are:
 ./docker-compose.yaml:      - CHASSIS-PG-HOST-PORT:5432
 ```
 
+### Edit business logic boilerplate
+
+As of the date this document is being written, the spots are:
+
+```plain
+.
+├── application
+|   ├── KafkaConsumerConfig.java
+|   └── KafkaConsumerService.java
+└── core
+    ├── Account.java
+    ├── AccountRepository.java
+    ├── events
+    │   ├── AccountCreatedEvent.java
+    │   └── AccountDeletedEvent.java
+    └── services
+        └── SynchronizeAccount.java
+```
+
 
 [chassis]: https://microservices.io/patterns/microservice-chassis.html
+[template]: https://microservices.io/patterns/service-template.html
+

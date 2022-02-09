@@ -24,7 +24,6 @@ spring:
 
 topics:
   acc_created: accounts_created
-  acc_updated: accounts_updated
   acc_deleted: accounts_removed
 
 server:
